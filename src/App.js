@@ -61,7 +61,7 @@ function App() {
   };
 
   const displayNotes = notes.filter((note) =>
-    note.text.toLowerCase().includes(searchText)
+    note.text.toLowerCase().includes(searchText.toLowerCase())
   );
 
   useEffect(() => {
