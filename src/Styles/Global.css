@@ -11,6 +11,11 @@
   background-color: #282c34;
 }
 
+.dark-mode .header {
+  background-color: #282c34;
+
+}
+
 .dark-mode .header h3 {
   color: #fff;
 }

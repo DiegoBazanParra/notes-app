@@ -9,21 +9,21 @@ function App() {
   const ListNotes = [
     {
       id: nanoid(),
-      text: "Hola a todos",
-      color: "red",
-      date: "15/04/2021",
+      text: "",
+      color: "#fe9b72",
+      date: "14/11/2021",
     },
     {
       id: nanoid(),
-      text: "Hola a todos denuevo",
-      color: "blue",
-      date: "21/04/2021",
+      text: "",
+      color: "#fec971",
+      date: "14/11/2021",
     },
     {
       id: nanoid(),
-      text: "Hola a todos otra vez",
-      color: "green",
-      date: "30/04/2021",
+      text: "",
+      color: "#00d4fe",
+      date: "14/11/2021",
     },
   ];
   const [notes, setNotes] = useState(ListNotes);
