@@ -28,7 +28,7 @@ function AddNote({ handleAddNote, addNotes, characterLimit }) {
         placeholder="Escribe Aquí tu Nueva Nota..."
       />
       <div className="note-save">
-        <small>{characterLimit - noteText.length} Remaining</small>
+        <small>{characterLimit - noteText.length} Restantes</small>
         <button onClick={handleSaveClick} className="save">
           Save
         </button>

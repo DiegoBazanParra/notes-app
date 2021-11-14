@@ -29,7 +29,7 @@ function Note({
       />
       <div className="note-footer">
         <div className="note-words">
-          <p>{characterLimit - text.length} Remaining</p>
+          <p>{characterLimit - text.length} Restantes</p>
         </div>
         <div className="note-date">
           <p>{date}</p>

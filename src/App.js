@@ -63,12 +63,14 @@ function App() {
   const displayNotes = notes.filter((note) =>
     note.text.toLowerCase().includes(searchText)
   );
+
   useEffect(() => {
     const saveNotes = JSON.parse(localStorage.getItem("react-notes-app"));
     if (saveNotes) {
       setNotes(saveNotes);
     }
   }, []);
+
   useEffect(() => {
     localStorage.setItem("react-notes-app", JSON.stringify(notes));
   }, [notes]);
@@ -84,7 +86,7 @@ function App() {
   const characterLimit = 200;
 
   return (
-    <div className={`${darkMode && "dark-mode"}`}>
+    <div className={darkMode ? "dark-mode" : "App"}>
       <Header handleToggleDarkMode={setDarkMode} />
       <div className="container">
         <Search handleSearchNote={setSearchText} />

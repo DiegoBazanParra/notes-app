@@ -9,20 +9,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 15px 20px;
   max-width: 1300px;
   margin: auto;
 }
 
 .header .logo {
   display: flex;
+  align-items: center;
 }
 
 .header .logo h3 {
-
   font-weight: 500;
   font-size: 30px;
-
 }
 
 .header .logo img {
@@ -46,5 +45,20 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width:480px) {
+  .header {
+    margin-bottom: 10px;
+  }
+
+  .header .logo img {
+    width: 50px;
+  }
+
+  .header .logo h3 {
+    font-weight: 500;
+    font-size: 22px;
   }
 }
