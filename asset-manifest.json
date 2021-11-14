@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/notes-app/static/css/main.ed21406c.chunk.css",
-    "main.js": "/notes-app/static/js/main.1f4ae850.chunk.js",
-    "main.js.map": "/notes-app/static/js/main.1f4ae850.chunk.js.map",
+    "main.css": "/notes-app/static/css/main.045db212.chunk.css",
+    "main.js": "/notes-app/static/js/main.93a43099.chunk.js",
+    "main.js.map": "/notes-app/static/js/main.93a43099.chunk.js.map",
     "runtime-main.js": "/notes-app/static/js/runtime-main.a0166229.js",
     "runtime-main.js.map": "/notes-app/static/js/runtime-main.a0166229.js.map",
     "static/js/2.ed3bb45c.chunk.js": "/notes-app/static/js/2.ed3bb45c.chunk.js",
     "static/js/2.ed3bb45c.chunk.js.map": "/notes-app/static/js/2.ed3bb45c.chunk.js.map",
     "index.html": "/notes-app/index.html",
-    "static/css/main.ed21406c.chunk.css.map": "/notes-app/static/css/main.ed21406c.chunk.css.map",
+    "static/css/main.045db212.chunk.css.map": "/notes-app/static/css/main.045db212.chunk.css.map",
     "static/js/2.ed3bb45c.chunk.js.LICENSE.txt": "/notes-app/static/js/2.ed3bb45c.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/notes-app/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a0166229.js",
     "static/js/2.ed3bb45c.chunk.js",
-    "static/css/main.ed21406c.chunk.css",
-    "static/js/main.1f4ae850.chunk.js"
+    "static/css/main.045db212.chunk.css",
+    "static/js/main.93a43099.chunk.js"
   ]
 }
