@@ -2,7 +2,7 @@ import "Styles/Header.css";
 import React from "react";
 import logo from "Assets/img/logo.svg";
 
-function Header({ handleToggleDarkMode }) {
+function Header({ handleToggleDarkMode, theme }) {
   return (
     <div className="header">
       <div className="header-container">
@@ -16,7 +16,7 @@ function Header({ handleToggleDarkMode }) {
           }
           className="save"
         >
-          Toggle Mode
+          {theme ? "Modo Oscuro" : "Modo Claro"}
         </button>
       </div>
     </div>
