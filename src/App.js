@@ -1,23 +1,102 @@
-import logo from './logo.svg';
-import './App.css';
+import "Styles/Global.css";
 
+import NoteList from "./Components/NoteList";
+import { useEffect, useState } from "react";
+import { nanoid } from "nanoid";
+import Search from "./Components/Search";
+import Header from "Components/Header";
 function App() {
+  const ListNotes = [
+    {
+      id: nanoid(),
+      text: "Hola a todos",
+      color: "red",
+      date: "15/04/2021",
+    },
+    {
+      id: nanoid(),
+      text: "Hola a todos denuevo",
+      color: "blue",
+      date: "21/04/2021",
+    },
+    {
+      id: nanoid(),
+      text: "Hola a todos otra vez",
+      color: "green",
+      date: "30/04/2021",
+    },
+  ];
+  const [notes, setNotes] = useState(ListNotes);
+  const [searchText, setSearchText] = useState("");
+  const [darkMode, setDarkMode] = useState(false);
+
+  const addNote = (text) => {
+    const date = new Date();
+    const newNote = {
+      id: nanoid(),
+      text: text,
+      color: "",
+      date: date.toLocaleDateString(),
+    };
+    const newNotes = [...notes, newNote];
+    setNotes(newNotes);
+  };
+
+  const addNotes = (color) => {
+    const tempNotes = [...notes];
+    const date = new Date();
+
+    tempNotes.push({
+      id: nanoid(),
+      text: "",
+      date: date.toLocaleDateString(),
+      color,
+    });
+    setNotes(tempNotes);
+  };
+
+  const deleteNote = (id) => {
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
+  };
+
+  const displayNotes = notes.filter((note) =>
+    note.text.toLowerCase().includes(searchText)
+  );
+  useEffect(() => {
+    const saveNotes = JSON.parse(localStorage.getItem("react-notes-app"));
+    if (saveNotes) {
+      setNotes(saveNotes);
+    }
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("react-notes-app", JSON.stringify(notes));
+  }, [notes]);
+
+  const updateText = (text, id) => {
+    const tempNotes = [...notes];
+
+    const index = tempNotes.findIndex((item) => item.id === id);
+    if (index < 0) return;
+    tempNotes[index].text = text;
+    setNotes(tempNotes);
+  };
+  const characterLimit = 200;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`${darkMode && "dark-mode"}`}>
+      <Header handleToggleDarkMode={setDarkMode} />
+      <div className="container">
+        <Search handleSearchNote={setSearchText} />
+        <NoteList
+          notes={displayNotes}
+          addNotes={addNotes}
+          handleAddNote={addNote}
+          handleDeleteNote={deleteNote}
+          updateText={updateText}
+          characterLimit={characterLimit}
+        />
+      </div>
     </div>
   );
 }
