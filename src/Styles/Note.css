@@ -109,6 +109,15 @@
   outline: none;
 }
 
+.note-color {
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+}
+
+.note-color h3 {
+  font-weight: 500;
+}
 
 .note-list-colors ul {
   display: grid;
@@ -142,7 +151,7 @@
 .note-list-colors {
   display: none;
   flex-direction: column;
-  width: 200px;
+  width: 220px;
   background-color: #fff;
   padding: 10px;
   border-radius: 8px;

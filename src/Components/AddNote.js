@@ -14,6 +14,8 @@ function AddNote({ handleAddNote, addNotes, characterLimit }) {
     if (noteText.trim().length > 0) {
       handleAddNote(noteText);
       setNoteText("");
+    } else {
+      alert("Debes escribir algo para poder crear tu Nota :D");
     }
   };
 

@@ -16,10 +16,10 @@ function Color({ addNotes }) {
   return (
     <div>
       <div className="note-color" onClick={() => setListOpen(!listOpen)}>
+        <h3>Selecciona un Color:</h3>
         <MdColorLens className="color-icon" size="1.3em" />
       </div>
       <div className={`note-list-colors ${listOpen ? "active" : ""}`}>
-        <h3>Lista de Colores</h3>
         <ul>
           {colors.map((item, index) => (
             <li
